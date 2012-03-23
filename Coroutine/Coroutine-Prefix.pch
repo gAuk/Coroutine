@@ -1,0 +1,15 @@
+//
+// Prefix header for all source files of the 'Coroutine' target in the 'Coroutine' project
+//
+
+#ifdef __OBJC__
+  #import <Foundation/Foundation.h>
+
+#if DEBUG
+#   define MyLog(fmt, ...) NSLog((@"%s[%d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#   define MyLog(...)
+#   define NSLog( args... )
+#endif
+
+#endif
